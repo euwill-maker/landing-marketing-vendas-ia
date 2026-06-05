@@ -179,7 +179,14 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(4,17,12,.85)}
 .squad .tag{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10px;color:var(--green-l);border:1px solid rgba(16,185,129,.3);border-radius:20px;padding:3px 9px}
 .squad.custom{background:linear-gradient(135deg,rgba(16,185,129,.16),rgba(34,211,238,.08));border-color:rgba(16,185,129,.5)}
 @media(max-width:900px){.squads{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.squads{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .squads{grid-template-columns:1fr 1fr;gap:12px}
+  #servicos .squad p{display:none}
+  .squad{padding:18px 14px}
+  .squad .ic{width:42px;height:42px;font-size:19px;margin-bottom:12px}
+  .squad h3{font-size:15px;margin-bottom:0}
+  .squad .tag{display:none}
+}
 
 /* ===================== PILLARS ===================== */
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:54px}
@@ -340,7 +347,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
       <a href="#porque">Por que nós</a>
       <a href="#faq">Dúvidas</a>
     </nav>
-    <button class="btn btn-primary" data-cta>Quero crescer</button>
+    <button class="btn btn-primary" data-cta>Quero um diagnóstico</button>
   </div>
 </header>
 
@@ -356,7 +363,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
       <h1 class="reveal d1">Transforme seu marketing<br>numa <span class="grad-text" id="rotator">máquina de vendas</span><span class="type-cursor" aria-hidden="true"></span></h1>
       <p class="lead reveal d2">Estratégia, execução e <strong>inteligência artificial</strong> trabalhando juntas pra encher sua agenda de clientes — com dados no comando e <strong>6 meses de acompanhamento</strong> de perto.</p>
       <div class="hero-cta reveal d3">
-        <button class="btn btn-primary pulse" data-cta>Quero crescer agora →</button>
+        <button class="btn btn-primary pulse" data-cta>Quero um diagnóstico →</button>
         <a href="#metodo" class="btn btn-ghost">Ver como funciona</a>
       </div>
       <div class="hero-trust reveal d4">
@@ -498,7 +505,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
         <div class="b"><span class="ck">✓</span> Foco obsessivo em ROI e previsibilidade</div>
       </div>
       <div class="auth-sign">— <b>William Monteiro</b>, fundador</div>
-      <div style="margin-top:26px"><button class="btn btn-primary pulse" data-cta>Falar com o especialista →</button></div>
+      <div style="margin-top:26px"><button class="btn btn-primary pulse" data-cta>Quero um diagnóstico →</button></div>
     </div>
   </div>
 </section>
@@ -581,7 +588,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
         <div class="eyebrow"><span class="dot"></span> Vamos conversar</div>
         <h2>Pronto pra fazer o ponteiro <span class="grad-text">mexer?</span></h2>
         <p class="lead center">Comece com um diagnóstico gratuito. A gente analisa seu cenário e mostra, na prática, onde está o seu próximo salto de crescimento.</p>
-        <button class="btn btn-primary pulse" data-cta>Quero meu diagnóstico gratuito →</button>
+        <button class="btn btn-primary pulse" data-cta>Quero um diagnóstico →</button>
       </div>
     </div>
   </div>
