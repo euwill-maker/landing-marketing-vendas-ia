@@ -261,6 +261,9 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(4,17,12,.85)}
 /* ===================== FOOTER ===================== */
 footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-size:13px}
 .foot-in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ig{display:inline-flex;align-items:center;gap:8px;color:var(--txt2);font-weight:600;transition:color .2s}
+.ig:hover{color:var(--green-l)}
+.ig svg{width:20px;height:20px}
 
 /* ===================== MODAL ===================== */
 .modal-bg{position:fixed;inset:0;z-index:100;background:rgba(2,8,5,.8);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
@@ -284,18 +287,19 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
 .authority{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
 .expert{position:relative;max-width:320px;justify-self:center;width:100%}
 .expert-glow{position:absolute;inset:-3px;border-radius:26px;background:linear-gradient(120deg,var(--green),var(--cyan),var(--green));background-size:200% 200%;animation:gradmove 5s linear infinite;filter:blur(20px);opacity:.45;z-index:0}
-.expert-frame{position:relative;z-index:1;border-radius:22px;overflow:hidden;border:1px solid rgba(16,185,129,.4);box-shadow:0 30px 80px -28px rgba(0,0,0,.85);animation:float 6.5s ease-in-out infinite;aspect-ratio:1/1;background-image:url('especialista.jpg');background-repeat:no-repeat;background-size:150%;background-position:50% 18%;transition:background-size .6s ease}
-.expert-frame:hover{background-size:160%}
+.expert-frame{position:relative;z-index:1;border-radius:22px;overflow:hidden;border:1px solid rgba(16,185,129,.4);box-shadow:0 30px 80px -28px rgba(0,0,0,.85);animation:float 6.5s ease-in-out infinite;aspect-ratio:1/1;background:url('mentor.jpg') no-repeat 50% 16%;background-size:cover}
+.expert-frame:hover{background-size:cover}
 .expert-frame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(4,17,12,0) 50%,rgba(4,17,12,.82) 100%),radial-gradient(120% 75% at 50% 120%,rgba(16,185,129,.32),transparent 60%)}
 .expert-badge{position:absolute;z-index:2;left:-16px;bottom:28px;background:rgba(8,26,19,.92);backdrop-filter:blur(8px);border:1px solid rgba(16,185,129,.45);border-radius:14px;padding:13px 17px;box-shadow:0 16px 34px -12px rgba(0,0,0,.75);animation:float 6.5s ease-in-out infinite 1.3s}
 .expert-badge .v{font-family:var(--display);font-weight:800;font-size:25px;line-height:1;color:#fff}
 .expert-badge .l{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--green-l);margin-top:4px}
+.expert-badge.two{left:auto;right:-16px;top:22px;bottom:auto;animation-delay:.5s}
 .auth-bullets{display:flex;flex-direction:column;gap:12px;margin:22px 0 24px}
 .auth-bullets .b{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--txt2)}
 .auth-bullets .b .ck{width:26px;height:26px;border-radius:8px;flex-shrink:0;display:grid;place-items:center;font-size:12px;background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.34);color:var(--green-l)}
 .auth-sign{font-size:14px;color:var(--txt3)}
 .auth-sign b{color:#fff;font-family:var(--display);font-weight:700}
-@media(max-width:820px){.authority{grid-template-columns:1fr;gap:38px}.expert{max-width:340px}.expert-badge{left:6px}}
+@media(max-width:820px){.authority{grid-template-columns:1fr;gap:38px}.expert{max-width:340px}.expert-badge{left:6px}.expert-badge.two{left:auto;right:6px;top:16px}}
 
 /* ===================== TACTICAL BGs ===================== */
 #porque,#metodo,#servicos,#diferenciais{overflow:hidden}
@@ -494,13 +498,17 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
         <div class="v">+120</div>
         <div class="l">NEGÓCIOS ESCALADOS</div>
       </div>
+      <div class="expert-badge two">
+        <div class="v">+5</div>
+        <div class="l">ANOS DE EXPERIÊNCIA</div>
+      </div>
     </div>
     <div class="reveal d2">
       <div class="eyebrow"><span class="dot"></span> Quem está por trás</div>
       <h2 class="h-sec">Estratégia de quem vive de <span class="grad-text">resultado.</span></h2>
       <p class="lead">Aqui você não fala com robô nem com estagiário. Fala com quem coloca a mão na massa e responde pelo seu crescimento — com método, dados e anos de campo de batalha em marketing, vendas e IA.</p>
       <div class="auth-bullets">
-        <div class="b"><span class="ck">✓</span> +10 anos no mercado de marketing e vendas</div>
+        <div class="b"><span class="ck">✓</span> Mais de 5 anos de experiência no mercado</div>
         <div class="b"><span class="ck">✓</span> Especialista em tráfego, funis e IA aplicada</div>
         <div class="b"><span class="ck">✓</span> Foco obsessivo em ROI e previsibilidade</div>
       </div>
@@ -598,6 +606,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
 <footer>
   <div class="wrap foot-in">
     <div>© 2026 · Marketing, Vendas e IA que geram resultado</div>
+    <a href="https://www.instagram.com/euwillianmonteiro/" target="_blank" rel="noopener" class="ig" aria-label="Instagram @euwillianmonteiro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @euwillianmonteiro</a>
   </div>
 </footer>
 
