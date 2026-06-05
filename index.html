@@ -270,7 +270,8 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
 .field input:focus{outline:none;border-color:var(--green)}
 .field input.err{border-color:#ff5f56}
 .modal .btn{width:100%;justify-content:center;margin-top:6px}
-.modal .fine{text-align:center;color:var(--txt3);font-size:12px;margin-top:14px}
+.modal .fine{text-align:center;color:var(--txt3);font-size:12px;margin-top:14px;line-height:1.4}
+.hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none}
 
 /* ===================== AUTHORITY (especialista) ===================== */
 .authority{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
@@ -603,8 +604,9 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
       <div class="field"><label>Seu nome</label><input type="text" name="nome" placeholder="Como podemos te chamar?" required></div>
       <div class="field"><label>Seu melhor e-mail</label><input type="email" name="email" placeholder="voce@email.com" required></div>
       <div class="field"><label>Seu WhatsApp</label><input type="tel" name="whatsapp" placeholder="(11) 99999-9999" required></div>
+      <input type="text" name="empresa_site" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn btn-primary">Falar com especialista →</button>
-      <p class="fine">🔒 Seus dados estão seguros. Sem spam.</p>
+      <p class="fine">🔒 Ao enviar, você concorda em ser contatado e com o uso dos seus dados para este atendimento. Sem spam.</p>
     </form>
   </div>
 </div>
@@ -641,12 +643,13 @@ const form = document.getElementById('leadForm');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
+  if ((data.get('empresa_site')||'').trim()) return; // honeypot: robô detectado, aborta silenciosamente
   const nome = (data.get('nome')||'').trim();
   const email = (data.get('email')||'').trim();
   const zap = (data.get('whatsapp')||'').trim();
 
   let ok = true;
-  form.querySelectorAll('input').forEach(i => {
+  form.querySelectorAll('input:not(.hp-field)').forEach(i => {
     const valid = i.value.trim() && (i.type!=='email' || /\S+@\S+\.\S+/.test(i.value));
     i.classList.toggle('err', !valid);
     if (!valid) ok = false;
