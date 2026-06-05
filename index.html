@@ -661,11 +661,12 @@ form.addEventListener('submit', async (e) => {
   // salva o lead (Planilha + e-mail) e DEPOIS abre o WhatsApp
   if (LEADS_ENDPOINT) {
     try {
-      await fetch(LEADS_ENDPOINT, {
-        method: 'POST', mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ nome, email, whatsapp: zap, origem: 'Página de Serviços' }).toString()
-      });
+      const body = new URLSearchParams({ nome, email, whatsapp: zap, origem: 'Página de Serviços' }).toString();
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(LEADS_ENDPOINT, new Blob([body], { type: 'application/x-www-form-urlencoded' }));
+      } else {
+        fetch(LEADS_ENDPOINT, { method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'application/x-www-form-urlencoded'}, body });
+      }
     } catch (err) { /* mesmo se falhar, segue pro WhatsApp */ }
   }
   window.location.href = `https://wa.me/${WHATSAPP}?text=${msg}`;
