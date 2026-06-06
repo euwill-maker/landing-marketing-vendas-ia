@@ -198,13 +198,11 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(20,10,4,.85)}
 .sim-msg{font-family:var(--display);font-weight:800;font-size:17px;color:var(--green);min-height:22px}
 .sim-msg.below{color:var(--txt3);font-weight:600;font-family:var(--body);font-size:14px}
 .sim-note{color:var(--txt2);font-size:14.5px;margin-top:24px;text-align:center}
-.sim-wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:center;max-width:1000px;margin:46px auto 0}
-.sim-photo{position:relative}
-.sim-photo img{position:relative;z-index:1;width:100%;border-radius:20px;display:block;border:1px solid rgba(249,115,22,.28);box-shadow:0 30px 70px -28px rgba(0,0,0,.85)}
-.sim-glow{position:absolute;inset:-7%;z-index:0;background:radial-gradient(closest-side,rgba(249,115,22,.5),transparent 72%);filter:blur(28px);opacity:.6}
-.sim-title{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,28px);margin-bottom:18px;text-align:center}
-.sim-wrap .sim{max-width:none;margin:0}
-@media(max-width:820px){.sim-wrap{grid-template-columns:1fr;gap:28px;max-width:560px}.sim-photo{max-width:380px;margin:0 auto;width:100%}}
+#simulador{position:relative;overflow:hidden}
+.sim-bg{position:absolute;inset:0;z-index:0;background:url('sim-img.jpg') no-repeat center;background-size:cover;opacity:.2;-webkit-mask-image:radial-gradient(125% 95% at 50% 42%,#000 0%,transparent 68%);mask-image:radial-gradient(125% 95% at 50% 42%,#000 0%,transparent 68%)}
+#simulador .wrap{position:relative;z-index:1}
+.sim-title{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,28px);margin:46px 0 18px;text-align:center}
+@media(max-width:600px){.sim-bg{opacity:.14}}
 
 /* RECEITA PREVISÍVEL */
 .rev-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
@@ -350,17 +348,15 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
 
 <!-- SIMULADOR (micro-entrega) -->
 <section class="section" id="simulador">
+  <div class="sim-bg"></div>
   <div class="wrap">
     <div class="center">
       <div class="eyebrow reveal"><span class="dot"></span> Faça as contas agora</div>
       <h2 class="h-sec reveal d1">Veja os 10K <span class="grad-text">caberem na sua realidade.</span></h2>
       <p class="lead center reveal d2">Não precisa de mil clientes. Mexe nos controles e descubra quantos clientes te levam aos 10K:</p>
     </div>
-    <div class="sim-wrap">
-      <div class="sim-photo reveal d1"><div class="sim-glow"></div><img src="sim-img.jpg" alt="Transforme cliques em faturamento com marketing e IA" loading="lazy"></div>
-      <div class="sim-col reveal d2">
-        <h3 class="sim-title">💰 Simule seu <span class="grad-text">faturamento</span></h3>
-        <div class="sim">
+    <h3 class="sim-title reveal d1">💰 Simule seu <span class="grad-text">faturamento</span></h3>
+    <div class="sim reveal d2">
       <div class="sim-row">
         <label>Clientes por mês <b id="simC">4</b></label>
         <input type="range" id="rangeC" min="1" max="12" value="4" aria-label="Clientes por mês">
@@ -375,8 +371,6 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
         <div class="sim-bar"><div class="sim-fill" id="simFill"></div></div>
         <div class="sim-goal">meta: R$ 10.000</div>
         <div class="sim-msg" id="simMsg">🎯 Você bateu a meta dos 10K!</div>
-      </div>
-        </div>
       </div>
     </div>
     <p class="sim-note reveal">Viu como é possível? Na <strong>Operação 10K</strong> você aprende a <strong>conseguir esses clientes</strong> e a <strong>cobrar o que vale</strong>.</p>
