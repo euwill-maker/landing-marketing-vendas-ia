@@ -256,7 +256,27 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(20,10,4,.85)}
 .final .lead{margin:0 auto 30px}
 .final .scan{position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(251,146,60,.12),transparent);animation:scan 5s ease-in-out infinite}
 
-footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-size:13px;text-align:center}
+footer{position:relative;overflow:hidden;border-top:1px solid var(--line2);padding:56px 0 46px;color:var(--txt3);font-size:13px;text-align:center}
+footer::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--orange),transparent);background-size:42% 100%;background-repeat:no-repeat;animation:footline 4.5s linear infinite}
+@keyframes footline{0%{background-position:-42% 0}100%{background-position:142% 0}}
+footer::after{content:'';position:absolute;left:50%;top:-90px;width:640px;height:280px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(249,115,22,.18),transparent 72%);pointer-events:none;animation:footglow 5s ease-in-out infinite}
+@keyframes footglow{0%,100%{opacity:.45}50%{opacity:1}}
+.foot-fx{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.foot-fx span{position:absolute;bottom:-8px;width:4px;height:4px;border-radius:50%;background:var(--orange-l);box-shadow:0 0 8px var(--orange);opacity:0;animation:footrise 7s linear infinite}
+.foot-fx span:nth-child(1){left:14%;animation-delay:0s}
+.foot-fx span:nth-child(2){left:30%;animation-delay:2.4s}
+.foot-fx span:nth-child(3){left:50%;animation-delay:1.2s}
+.foot-fx span:nth-child(4){left:68%;animation-delay:3.6s}
+.foot-fx span:nth-child(5){left:82%;animation-delay:.6s}
+.foot-fx span:nth-child(6){left:94%;animation-delay:4.4s}
+@keyframes footrise{0%{transform:translateY(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-150px);opacity:0}}
+.foot-in{position:relative;z-index:1}
+.foot-badge{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--orange-l),var(--orange-d));margin-bottom:16px;position:relative;box-shadow:0 8px 26px -6px rgba(249,115,22,.75)}
+.foot-badge svg{width:22px;height:22px;color:#fff;position:relative;z-index:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.foot-badge::before{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--orange-l);animation:footpulse 2.2s ease-out infinite}
+@keyframes footpulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.75);opacity:0}}
+.foot-brand{font-size:14px;color:var(--txt2);margin-bottom:6px}
+.foot-brand b{color:#fff;font-weight:700}
 .ig{display:inline-flex;align-items:center;gap:8px;color:var(--txt2);font-weight:600;transition:color .2s;margin-top:10px}
 .ig:hover{color:var(--orange-l)}
 .ig svg{width:20px;height:20px}
@@ -549,7 +569,14 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
   </div>
 </section>
 
-<footer><div class="wrap">⚡ Operação 10K · William Monteiro<br><a href="https://www.instagram.com/euwillianmonteiro/" target="_blank" rel="noopener" class="ig" aria-label="Instagram @euwillianmonteiro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @euwillianmonteiro</a></div></footer>
+<footer>
+  <div class="foot-fx" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap foot-in">
+    <div class="foot-badge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+    <div class="foot-brand"><b>Operação 10K</b> · William Monteiro</div>
+    <a href="https://www.instagram.com/euwillianmonteiro/" target="_blank" rel="noopener" class="ig" aria-label="Instagram @euwillianmonteiro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @euwillianmonteiro</a>
+  </div>
+</footer>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modal">
