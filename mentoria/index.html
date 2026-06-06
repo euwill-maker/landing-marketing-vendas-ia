@@ -115,7 +115,14 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(20,10,4,.85)}
 .card .ic-emoji{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
 .card:hover .ic-emoji{transform:translateY(-3px) scale(1.1) rotate(-6deg)}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.cards{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .section{padding:60px 0}
+  .cards{grid-template-columns:1fr 1fr;gap:11px}
+  #aprender .card{padding:17px 13px}
+  #aprender .card p{display:none}
+  #aprender .card .ic{width:40px;height:40px;margin-bottom:11px}
+  #aprender .card h3{font-size:14px;line-height:1.25}
+}
 
 /* AUTHORITY */
 .authority{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
@@ -365,10 +372,10 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
     <div class="cards">
       <div class="card reveal d1"><div class="ic"><span class="ic-emoji">🧲</span></div><h3>Captação de clientes</h3><p>Como atrair e fechar clientes pagantes mesmo começando do zero, sem precisar de audiência.</p></div>
       <div class="card reveal d2"><div class="ic"><span class="ic-emoji">🎯</span></div><h3>Tráfego pago</h3><p>Anúncios no Meta e Google que dão retorno de verdade — do criativo à otimização.</p></div>
-      <div class="card reveal d3"><div class="ic"><span class="ic-emoji">🧠</span></div><h3>IA aplicada</h3><p>Use inteligência artificial pra entregar mais rápido, escalar e se destacar dos concorrentes.</p></div>
+      <div class="card reveal d3"><div class="ic"><span class="ic-emoji">🧠</span></div><h3>Ferramentas & IA</h3><p>As plataformas e IAs certas pra entregar mais rápido, sem ser técnico — e se destacar dos concorrentes.</p></div>
       <div class="card reveal d1"><div class="ic"><span class="ic-emoji">🧩</span></div><h3>Funis e ofertas</h3><p>Estruture funis e ofertas que transformam clique em cliente — pro seu serviço e pro do cliente.</p></div>
       <div class="card reveal d2"><div class="ic"><span class="ic-emoji">💰</span></div><h3>Precificação</h3><p>Pare de cobrar barato. Como precificar e vender contratos de R$ 1.000, 2.000, 3.000+.</p></div>
-      <div class="card reveal d3"><div class="ic"><span class="ic-emoji">🚀</span></div><h3>Gestão e escala</h3><p>Organize a rotina, entregue com consistência e construa uma renda previsível chegando aos 10K.</p></div>
+      <div class="card reveal d3"><div class="ic"><span class="ic-emoji">👥</span></div><h3>Delegar & escalar</h3><p>Como montar um time, terceirizar funções e crescer a renda sem precisar fazer tudo sozinho.</p></div>
     </div>
   </div>
 </section>
@@ -448,10 +455,10 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
       <p class="lead center reveal d2">Pense no retorno: <strong>um único cliente</strong> de marketing já paga a mentoria. A partir do segundo, é lucro.</p>
     </div>
     <div class="price-card reveal d2">
-      <div class="price-ribbon">★ vagas limitadas (acompanhamento individual)</div>
+      <div class="price-ribbon">🔥 Oferta por tempo limitado</div>
       <h3>Operação 10K · Mentoria Individual</h3>
       <div class="ps">Do zero ao primeiro cliente — e além.</div>
-      <div class="price-highlight">🎯 Acompanhamento <strong>até você alcançar os 10K por mês</strong></div>
+      <div class="price-highlight">🎯 O diferencial: <strong>acompanhamento individual até você bater os 10K por mês</strong></div>
       <div class="price-list">
         <div class="b"><span class="ck">✓</span> Acompanhamento individual e direto comigo</div>
         <div class="b"><span class="ck">✓</span> Plano de ação sob medida pro seu momento</div>
@@ -461,9 +468,9 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
         <div class="b"><span class="ck">✓</span> Suporte direto pra destravar quando empacar</div>
       </div>
       <div class="price-box">
-        <div class="price-from">Investimento</div>
-        <div class="price-main">12x de R$ <span>291,67</span></div>
-        <div class="price-cash">ou R$ 3.500 à vista</div>
+        <div class="price-from">De <s>R$ 3.500</s> · por tempo limitado:</div>
+        <div class="price-main">12x de R$ <span>208,33</span></div>
+        <div class="price-cash">ou R$ 2.500 à vista</div>
       </div>
       <button class="btn btn-primary pulse" data-cta>Quero minha vaga →</button>
       <div class="price-guar">🔒 7 dias de garantia · Pagamento seguro</div>
