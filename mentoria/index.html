@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentoria — Fature 10K por mês com Marketing e IA</title>
+<title>Operação 10K — Domine marketing e IA e fature 10K por mês</title>
 <meta name="description" content="Aprenda a faturar 10K por mês prestando serviços de marketing digital e IA. Mentoria individual e próxima, do zero ao primeiro cliente — com quem vive disso de verdade.">
 <meta name="theme-color" content="#140a04">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Mentoria — Fature 10K por mês com Marketing e IA">
+<meta property="og:title" content="Operação 10K — Domine marketing e IA e fature 10K por mês">
 <meta property="og:description" content="Do zero ao primeiro cliente. Aprenda a viver de marketing e IA com mentoria individual de quem faz isso todo dia.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23f97316'/%3E%3Ctext x='50' y='72' font-size='58' text-anchor='middle' fill='white'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,6 +142,27 @@ header.scrolled{border-bottom-color:var(--line2);background:rgba(20,10,4,.85)}
 @media(max-width:900px){.proofs{column-count:2}}
 @media(max-width:560px){.proofs{column-count:1}}
 
+/* SIMULADOR 10K */
+.sim{max-width:560px;margin:48px auto 0;border:1px solid rgba(249,115,22,.32);border-radius:20px;background:linear-gradient(180deg,rgba(249,115,22,.08),var(--bg2));padding:32px 30px;box-shadow:0 20px 50px -26px rgba(249,115,22,.5)}
+.sim-row{margin-bottom:26px}
+.sim-row label{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;color:var(--txt2);margin-bottom:12px;font-weight:600;gap:12px}
+.sim-row label b{font-family:var(--display);font-weight:800;font-size:18px;color:var(--orange-l);white-space:nowrap}
+.sim input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:20px;background:#3a2614;outline:none;cursor:pointer}
+.sim input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-d));box-shadow:0 4px 12px -2px rgba(249,115,22,.8);border:2px solid rgba(255,255,255,.15)}
+.sim input[type=range]::-moz-range-thumb{width:22px;height:22px;border:2px solid rgba(255,255,255,.15);border-radius:50%;background:var(--orange);cursor:pointer}
+.sim-result{border-top:1px solid var(--line);padding-top:24px;text-align:center}
+.sim-rs{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--txt3)}
+.sim-val{font-family:var(--display);font-weight:800;font-size:46px;color:#fff;line-height:1.1;margin:2px 0 18px}
+.sim-val span{font-size:18px;color:var(--txt3);font-weight:600}
+.sim-val{transition:text-shadow .35s ease}
+.sim-val.hit{text-shadow:0 0 28px rgba(251,146,60,.6)}
+.sim-bar{position:relative;height:12px;border-radius:20px;background:#3a2614;overflow:hidden;margin-bottom:6px}
+.sim-fill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--orange),var(--amber));border-radius:20px;transition:width .25s ease}
+.sim-goal{text-align:right;font-family:var(--mono);font-size:10.5px;color:var(--txt3);margin-bottom:14px}
+.sim-msg{font-family:var(--display);font-weight:800;font-size:17px;color:var(--green);min-height:22px}
+.sim-msg.below{color:var(--txt3);font-weight:600;font-family:var(--body);font-size:14px}
+.sim-note{color:var(--txt2);font-size:14.5px;margin-top:24px;text-align:center}
+
 /* RECEITA PREVISÍVEL */
 .rev-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
 .rev-stat{border:1px solid var(--line);border-radius:14px;padding:22px 18px;background:var(--bg2);text-align:center}
@@ -221,7 +242,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
 
 <header id="hdr">
   <div class="wrap nav">
-    <div class="eyebrow" style="margin:0"><span class="dot"></span> Mentoria · Marketing &amp; IA</div>
+    <div class="eyebrow" style="margin:0"><span class="dot"></span> Operação 10K</div>
     <nav class="nav-links">
       <a href="#metodo">O método</a>
       <a href="#aprender">O que aprende</a>
@@ -240,8 +261,8 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
   <div class="wrap hero-inner">
     <div>
       <div class="eyebrow reveal"><span class="dot"></span> Do zero ao primeiro cliente</div>
-      <h1 class="reveal d1">Aprenda a faturar<br><span class="grad-text">10K por mês</span><br>com marketing e IA.</h1>
-      <p class="lead reveal d2">Pare de assistir todo mundo lucrar no digital. Eu te ensino o <strong>caminho que eu uso todos os dias</strong> pra prestar serviços de marketing e IA — e te acompanho <strong>de perto</strong> até você fechar seus clientes e escalar.</p>
+      <h1 class="reveal d1">Bem-vindo à<br><span class="grad-text">Operação 10K.</span></h1>
+      <p class="lead reveal d2">Domine a habilidade mais bem paga da internet — <strong>marketing e IA</strong> — e construa sua renda do zero, com acompanhamento até você bater os <strong>10K por mês.</strong></p>
       <div class="hero-cta reveal d3">
         <button class="btn btn-primary pulse" data-cta>Quero entrar na mentoria →</button>
         <a href="#metodo" class="btn btn-ghost">Ver como funciona</a>
@@ -276,6 +297,35 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
       <div class="prob-card reveal d4"><div class="t">Cursos</div><div class="v">Assiste tudo e não sai do lugar</div></div>
     </div>
     <p class="prob-punch reveal">Não faltou conteúdo. Faltou um <span class="grad-text">caminho claro</span> e alguém do seu lado.</p>
+  </div>
+</section>
+
+<!-- SIMULADOR (micro-entrega) -->
+<section class="section" id="simulador">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow reveal"><span class="dot"></span> Faça as contas agora</div>
+      <h2 class="h-sec reveal d1">Veja os 10K <span class="grad-text">caberem na sua realidade.</span></h2>
+      <p class="lead center reveal d2">Não precisa de mil clientes. Mexe nos controles e descubra quantos clientes te levam aos 10K:</p>
+    </div>
+    <div class="sim reveal d2">
+      <div class="sim-row">
+        <label>Clientes por mês <b id="simC">4</b></label>
+        <input type="range" id="rangeC" min="1" max="12" value="4" aria-label="Clientes por mês">
+      </div>
+      <div class="sim-row">
+        <label>Você cobra por cliente <b id="simT">R$ 2.500</b></label>
+        <input type="range" id="rangeT" min="500" max="4000" step="100" value="2500" aria-label="Valor por cliente">
+      </div>
+      <div class="sim-result">
+        <div class="sim-rs">Seu faturamento</div>
+        <div class="sim-val" id="simVal">R$ 10.000<span>/mês</span></div>
+        <div class="sim-bar"><div class="sim-fill" id="simFill"></div></div>
+        <div class="sim-goal">meta: R$ 10.000</div>
+        <div class="sim-msg" id="simMsg">🎯 Você bateu a meta dos 10K!</div>
+      </div>
+    </div>
+    <p class="sim-note reveal">Viu como é possível? Na <strong>Operação 10K</strong> você aprende a <strong>conseguir esses clientes</strong> e a <strong>cobrar o que vale</strong>.</p>
   </div>
 </section>
 
@@ -399,7 +449,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
     </div>
     <div class="price-card reveal d2">
       <div class="price-ribbon">★ vagas limitadas (acompanhamento individual)</div>
-      <h3>Mentoria Individual · Marketing &amp; IA</h3>
+      <h3>Operação 10K · Mentoria Individual</h3>
       <div class="ps">Do zero ao primeiro cliente — e além.</div>
       <div class="price-highlight">🎯 Acompanhamento <strong>até você alcançar os 10K por mês</strong></div>
       <div class="price-list">
@@ -451,7 +501,7 @@ footer{border-top:1px solid var(--line2);padding:38px 0;color:var(--txt3);font-s
   </div>
 </section>
 
-<footer><div class="wrap">⚡ Mentoria de Marketing &amp; IA · William Monteiro<br><a href="https://www.instagram.com/euwillianmonteiro/" target="_blank" rel="noopener" class="ig" aria-label="Instagram @euwillianmonteiro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @euwillianmonteiro</a></div></footer>
+<footer><div class="wrap">⚡ Operação 10K · William Monteiro<br><a href="https://www.instagram.com/euwillianmonteiro/" target="_blank" rel="noopener" class="ig" aria-label="Instagram @euwillianmonteiro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @euwillianmonteiro</a></div></footer>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modal">
@@ -540,6 +590,59 @@ form.addEventListener('submit', async (e) => {
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+})();
+
+/* Simulador 10K (micro-entrega) */
+(function(){
+  const rc = document.getElementById('rangeC'), rt = document.getElementById('rangeT');
+  if (!rc || !rt) return;
+  const cEl = document.getElementById('simC'), tEl = document.getElementById('simT'),
+        val = document.getElementById('simVal'), fill = document.getElementById('simFill'), msg = document.getElementById('simMsg');
+  const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+  function upd(){
+    const c = +rc.value, t = +rt.value, total = c * t;
+    cEl.textContent = c; tEl.textContent = brl(t);
+    val.innerHTML = brl(total) + '<span>/mês</span>';
+    fill.style.width = Math.min(100, total / 10000 * 100) + '%';
+    if (total >= 10000){ msg.textContent = '🎯 Você já bateu (ou passou) os 10K!'; msg.classList.remove('below'); }
+    else { msg.textContent = 'Faltam ' + brl(10000 - total) + ' pra meta — dá pra chegar.'; msg.classList.add('below'); }
+  }
+  function upd2(){ upd(); val.classList.toggle('hit', (+rc.value)*(+rt.value) >= 10000); }
+  rc.addEventListener('input', upd2); rt.addEventListener('input', upd2); upd2();
+
+  // auto-demo: roda sozinho mostrando cenários; para na hora se o usuário mexer
+  let auto = true;
+  const stop = () => { auto = false; };
+  ['input','pointerdown','touchstart','keydown','wheel'].forEach(ev => { rc.addEventListener(ev, stop); rt.addEventListener(ev, stop); });
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const set = (c,t) => { rc.value = Math.round(c); rt.value = Math.round(t/100)*100; upd2(); };
+  const ease = t => t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;
+  const seq = [{c:2,t:1200},{c:4,t:2500},{c:7,t:3000},{c:4,t:2500}];
+  function play(){
+    if (reduce){ set(4,2500); return; }
+    let i = 0;
+    function step(){
+      if (!auto) return;
+      const a = seq[i], b = seq[i+1];
+      if (!b){ set(a.c, a.t); return; }
+      let start = null;
+      function frame(ts){
+        if (!auto) return;
+        if (start === null) start = ts;
+        const p = Math.min(1, (ts - start) / 1100), e = ease(p);
+        set(a.c + (b.c - a.c) * e, a.t + (b.t - a.t) * e);
+        if (p < 1) requestAnimationFrame(frame);
+        else { i++; setTimeout(step, 450); }
+      }
+      requestAnimationFrame(frame);
+    }
+    step();
+  }
+  const sec = document.getElementById('simulador');
+  if (sec && 'IntersectionObserver' in window){
+    const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ play(); obs.disconnect(); } }), { threshold:.4 });
+    obs.observe(sec);
+  } else { play(); }
 })();
 </script>
 </body>
